@@ -2,6 +2,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
   padding: 0;
 }
 
@@ -69,6 +70,11 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
 }
 
 .wrapper img {
@@ -78,14 +84,13 @@ html {
 
 .wrapper .item {
   color: black;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .video-container {
   position: absolute;
   width: 100%;
   left: 0;
-  top:0;
+  top: 0;
   margin: 0;
   padding: 0;
   height: 98vh;
@@ -96,17 +101,18 @@ html {
   height: 100%;
   min-height: 600px;
 }
-.return-btn{
+
+.return-btn {
   position: absolute;
-  background-color: whitesmoke;
-  padding:2px;
-  text-decoration: none;
-  text-emphasis: none;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 30px;
+  padding: 4px;
   text-align: center;
-  border-radius: 4px;
-  top:0;
-  left:0;
-  width:100px;
-  height:30px;
+  text-decoration: none;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=style.css.map */
