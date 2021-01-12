@@ -84,6 +84,7 @@ html {
 
 .wrapper .item {
   color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 .video-container {
