@@ -1,10 +1,10 @@
 extends layout
 block content
-    a(href="/") return 
+    a(class="return-btn" href="javascript:history.back()") return 
     div(class="item-container")
         -var x=array
         for item in x
-            a(class="wrapper" href=("/video?film="+item.href) target="_blank")
+            a(class="wrapper" href=("/video?film="+item.href))
                 img(title=item.title src=("https://subnhanh.net"+item.image))
                 p(class="item")=item.title
 

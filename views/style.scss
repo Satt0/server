@@ -8,6 +8,19 @@ html{
      width:100%;
      margin: 0 auto;
      text-align: center;
+     h1{
+         font-size: 50px;
+     }
+     form{
+         input{
+             height:40px;
+             margin-right: 5px;
+             border-radius: 3px;
+             border:none;
+             background-color: whitesmoke;
+             text-align: center;
+         }
+     }
  }
  .item-container{
      width: 90%;
@@ -45,7 +58,11 @@ html{
      
  }
 .video-container{
+    position: absolute;
     width:100%;
+    left:0;
+    margin:0;
+    padding:0;
     // margin:0 auto;
     height:98vh;
     // min-height: 700px;
