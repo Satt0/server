@@ -1,0 +1,10 @@
+extends layout
+block content
+    a(href="/") return 
+    div(class="item-container")
+        -var x=array
+        for item in x
+            a(class="wrapper" href=("/video?film="+item.href) target="_blank")
+                img(title=item.title src=("https://subnhanh.net"+item.image))
+                p(class="item")=item.title
+
