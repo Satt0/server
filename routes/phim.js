@@ -12,6 +12,7 @@ router.param('name',(req,res,next,id)=>{
                 const parser = new DomParser();
                 const id=parser.parseFromString(response.data);
                 const list=id.getElementById('ploption').childNodes || [];
+                const track=id.getElementById('')
                a=(list[0].outerHTML);
                let b=(a.substring(a.indexOf("ajaxPlayer"),a.indexOf('$(this)')).split(`'`));
                
@@ -31,6 +32,8 @@ router.param('name',(req,res,next,id)=>{
     }
 
 })
+
+
 
 router.get('/:name',(req,res,next)=>{
     fetch("https://subnhanh.net/frontend/default/ajax-player", {
@@ -56,6 +59,4 @@ router.get('/:name',(req,res,next)=>{
     });
     
   })
-
-
 module.exports=router;
