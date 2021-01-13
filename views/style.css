@@ -17,13 +17,18 @@ html {
   font-size: 50px;
 }
 
-.main-wrapper form input {
+.main-wrapper form input, .main-wrapper form select {
   height: 40px;
   margin-right: 5px;
   border-radius: 3px;
   border: none;
   background-color: whitesmoke;
   text-align: center;
+  width: 10%;
+}
+
+.main-wrapper form .input-text {
+  width: 50%;
 }
 
 .item-container {

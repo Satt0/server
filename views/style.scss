@@ -13,14 +13,25 @@ html{
          font-size: 50px;
      }
      form{
-         input{
-             height:40px;
-             margin-right: 5px;
-             border-radius: 3px;
-             border:none;
-             background-color: whitesmoke;
-             text-align: center;
-         }
+        // display:flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items:center;
+     
+        input,select{
+             
+            height:40px;
+            margin-right: 5px;
+            border-radius: 3px;
+            border:none;
+            background-color: whitesmoke;
+            text-align: center;
+            width:10%;
+        }
+        .input-text{
+            width:50%;
+        }
+      
      }
  }
  .item-container{

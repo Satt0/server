@@ -4,7 +4,7 @@ block content
     div(class="item-container")
         -var x=array
         for item in x
-            a(class="wrapper" href=("/video?film="+item.href))
+            a(class="wrapper" href=(""+item.href))
                 img(title=item.title src=("https://subnhanh.net"+item.image))
                 p(class="item")=item.title
 
