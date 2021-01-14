@@ -4,7 +4,6 @@ var router = express.Router();
 const DomParser = require('dom-parser')
 const axios = require('axios')
 const helper = require('./helper')
-const ar = require('./arr')
 const fetch=require('node-fetch')
 const rateLimit = require("express-rate-limit");
 const FormData=require('form-data')

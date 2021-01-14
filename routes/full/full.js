@@ -5,26 +5,53 @@ const fetch = require('node-fetch')
 
 router.param('name', (req, res, next, id) => {
 
-    axios.get(`https://subnhanh.net/xem-phim/${id}-full`).then(response => {
+    
+    axios.get(`https://subnhanh.net/phim/${id}`).then(response => {
         const parser = new DomParser();
         const id = parser.parseFromString(response.data);
-        const list = id.getElementById('ploption').childNodes || [];
-        const arr = list.map(e => {
-            const src = e.outerHTML.split(`'`);
-            return {
-                src: `epId=${src[1]}&type=${src[3]}`,
-                player: src[3]
+        const button=id.getElementsByClassName('button_xemphim')[0].outerHTML || ""
+        const a=(button.substring(button.indexOf('href'),button.indexOf('title')).split(`"`)[1]) || ""
+        
+       
 
-            }
+            
+
+        axios.get(`https://subnhanh.net${a}`).then(response => {
+            
+            const parser = new DomParser();
+            const id = parser.parseFromString(response.data);
+            const list = id.getElementById('ploption').childNodes || [];
+            const arr = list.map(e => {
+                const src = e.outerHTML.split(`'`);
+                return {
+                    src: `epId=${src[1]}&type=${src[3]}`,
+                    player: src[3]
+    
+                }
+            })
+            req.arr = arr;
+            next()
+    
+    
+        }).catch(e => {
+            next(e)
+    
         })
-        req.arr = arr;
-        next()
+            
 
 
     }).catch(e => {
         next(e)
 
     })
+
+
+
+
+
+
+
+    
 
 
 

@@ -1,6 +1,22 @@
 extends layout
 block content
-    a(class="return-btn" href="javascript:history.back()") return 
+    //- a(class="return-btn" href="javascript:history.back()") return 
+    
+    div(class='container d-flex justify-content-center align-content-center mt-4')
+      nav(aria-label='Page navigation example')
+        ul.pagination
+            li.page-item
+            a.page-link(href='#') Previous
+            li.page-item
+            a.page-link(href='#') 1
+            li.page-item
+            a.page-link(href='#') 2
+            li.page-item
+            a.page-link(href='#') 3
+            li.page-item
+            a.page-link(href='#') Next
+
+    
     div(class="item-container" id="getMe")
         -var x=array
         for item in x
@@ -8,7 +24,6 @@ block content
                 img(title=item.title src=("https://subnhanh.net"+item.image))
                 p(class="item")=item.title
     
-
 
     script
         include ./dist/js/search.js

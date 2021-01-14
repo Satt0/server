@@ -62,7 +62,7 @@ html{
      width: 90%;
      display:grid;
     //  columns: 1 1 1;
-     margin:0 auto;
+     margin:20px auto;
      
      
      grid-gap: 20px;
@@ -78,7 +78,15 @@ html{
      }
   
  }
-
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+        list-style-type: none;
+        margin-right: 5px;
+    }
+}
  .wrapper{
      display:flex;
      transition: .2s linear;
@@ -174,4 +182,7 @@ button {
         background-color: yellow;
       
     }
+}
+.mt-0{
+    margin-top: 15px;
 }
