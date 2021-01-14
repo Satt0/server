@@ -8,6 +8,7 @@ block content
         for item in player
            button(id=item.player class='btn' onclick=`goto1("`+item.player+`")`)=item.player
     div(class="eps-select")
+       if(eps.length>0) 
         h4 choose episode
         for item in eps
 

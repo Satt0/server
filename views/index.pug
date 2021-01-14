@@ -2,18 +2,22 @@ extends layout
 
 block content
   div(class="main-wrapper")
-    h1 Search for movies
-    form(action='/search' method="GET")
+     br
+     br
+     br
+     form(action='/search' method="GET")
    
-     input(class="input-text" type="text", name="search", placeholder="type movie name")
+      input(class="input-text" type="text", name="search", placeholder="type movie name")
       
-     input(type="submit", value="Search!")
+      input(type="submit", value="Search!")
      h2 Recents
      div(class='item-container' id='recent-list')
-          
+     h2 Latest
+     div(class='item-container' id='trending')
+    
            
             
-    script
+  script
       include ./dist/js/main.js
 
            

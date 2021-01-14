@@ -1,10 +1,19 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 100vw;
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
   padding: 0;
   background-position: center;
+}
+
+body {
+  background-position: center;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .active-link {
@@ -43,7 +52,8 @@ html {
   font-size: 50px;
 }
 
-.main-wrapper form input, .main-wrapper form select {
+.main-wrapper form input,
+.main-wrapper form select {
   height: 40px;
   margin-right: 5px;
   border-radius: 3px;
@@ -58,8 +68,13 @@ html {
   width: 50%;
 }
 
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
 .item-container {
-  width: 90%;
+  width: 70%;
   display: -ms-grid;
   display: grid;
   margin: 20px auto;
@@ -68,7 +83,13 @@ html {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1500px) {
+  .item-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 975px) {
   .item-container {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -82,7 +103,7 @@ html {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 470px) {
   .item-container {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -113,7 +134,8 @@ html {
   -webkit-transition: .2s linear;
   transition: .2s linear;
   color: black;
-  min-height: 350px;
+  background-color: whitesmoke;
+  min-height: 380px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -125,25 +147,27 @@ html {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 470px) {
+  .wrapper {
+    min-height: 300px;
+  }
+}
+
 .wrapper:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.wrapper img {
+.wrapper .img-ctn {
+  height: 80%;
   width: 100%;
-  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .wrapper .item {
   font-family: 'Roboto', sans-serif;
-}
-
-#recent-list .wrapper {
-  background-color: whitesmoke;
-  color: black;
-  font-size: .8rem;
-  min-height: 200px;
 }
 
 .video-container {

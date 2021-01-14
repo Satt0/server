@@ -1,148 +1,204 @@
-html{
+html {
     box-sizing: border-box;
-    margin:0;
+    width:100vw;
+    
+    margin: 0;
     font-family: 'Noto Sans JP', sans-serif;
-    padding:0;
+    padding: 0;
     // background-image: url('https://cdn.printgo.vn/uploads/media/783284/tong-hop-30-mau-hinh-nen-tet-cho-may-tinh-duoc-ua-thich-nhat-nam-nay-29_1605840035.jpg');
     background-position: center;
     // background-size: cover;
     // color:whitesmoke;
-    
- }
-.active-link{
-    background-color: blue;
-    color:white;
-    display:none;
+
 }
- #main-player{
-    @media only screen and(max-width:1000px){
-        height:50vh;
-        width:90vw;
-        
+body{
+    background-position: center;
+    
+}
+a{
+    text-decoration: none !important;
+}
+.active-link {
+    background-color: blue;
+    color: white;
+    display: none;
+}
+
+#main-player {
+    @media only screen and(max-width:1000px) {
+        height: 50vh;
+        width: 90vw;
+
         max-height: 400px;
     }
-     height:60vh;
-     width:80vw;
-     max-width: 1200px;
-     margin:5vh auto;
-     max-height: 800px;
-     iframe{
-         height:100%;
-     }
-    
- }
- .main-wrapper{
-     width:100%;
-     margin: 0 auto;
-     text-align: center;
-     h1{
-         font-size: 50px;
-     }
-     form{
-       
-     
-        input,select{
-             
-            height:40px;
+
+    height:60vh;
+    width:80vw;
+    max-width: 1200px;
+    margin:5vh auto;
+    max-height: 800px;
+
+    iframe {
+        height: 100%;
+    }
+
+}
+
+.main-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    // background-color: rgba(43, 21, 21, 0.2);
+    text-align: center;
+
+    h1 {
+        font-size: 50px;
+    }
+
+    form {
+
+
+        input,
+        select {
+
+            height: 40px;
             margin-right: 5px;
             border-radius: 3px;
-            border:none;
+            border: none;
             background-color: whitesmoke;
             text-align: center;
-            width:10%;
+            width: 10%;
             min-width: 100px;
         }
-        .input-text{
-            width:50%;
+
+        .input-text {
+            width: 50%;
         }
-      
-     }
- }
- .item-container{
-     width: 90%;
-     display:grid;
+
+    }
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.item-container {
+    width: 70%;
+    @media only screen and (max-width:1500px)
+    {
+        width:90%;
+    }
+    display: grid;
     //  columns: 1 1 1;
-     margin:20px auto;
-     
-     
-     grid-gap: 20px;
-     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-     @media only screen and (max-width:1000px){
+    margin: 20px auto;
+
+
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    @media only screen and (max-width:975px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-     }
-     @media only screen and (max-width:700px){
+    }
+
+    @media only screen and (max-width:700px) {
         grid-template-columns: 1fr 1fr 1fr;
-     }
-     @media only screen and (max-width:450px){
+    }
+
+    @media only screen and (max-width:470px) {
         grid-template-columns: 1fr 1fr;
-     }
-  
- }
-.header{
+    }
+
+}
+
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
-    li{
+
+    li {
         list-style-type: none;
         margin-right: 5px;
     }
 }
- .wrapper{
-     display:flex;
-     transition: .2s linear;
-     color:black;
-    //  color:whitesmoke;
-     &:hover{
-        transform:scale(1.05);
-     }
-     min-height:350px;
-     flex-direction: column;
-     justify-content: space-between;
-     text-align: center;
-     text-decoration: none;
-        img{
-            width:100%;
-            height:auto;
-            // max-width: 200px;
-        }
-        .item{
-            
-            font-family: 'Roboto', sans-serif; 
-        }
-     
- }
- #recent-list{
-    .wrapper{
-        background-color: whitesmoke;
-        color:black;
-        font-size: .8rem;
-        min-height: 200px;
+
+.wrapper {
+    display: flex;
+    transition: .2s linear;
+    color: black;
+    background-color: whitesmoke;
+    min-height: 380px;
+    @media only screen and (max-width:470px) {
+       min-height:300px;
     }
- }
-.video-container{
-    position: absolute;
-    width:100%;
-    left:0;
-    top:0;
-    margin:0;
-    padding:0;
-   
-    height:98vh;
-    ;
-    .video{
+    //  color:whitesmoke;
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    // min-height:270px;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    text-decoration: none;
+    .img-ctn{
+        height:80%;
         width:100%;
-        height:100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        // overflow: hidden;
+       
+    }
+    // img {
+    //         width:100%;
+    //     // height: 320px;
+    //     // min-width: 20px;
+    // }
+
+    .item {
+
+        font-family: 'Roboto', sans-serif;
+    }
+
+}
+
+// .wrapper {
+//     background-color: whitesmoke;
+//     color: black;
+//     font-size: .8rem;
+//     min-height: 200px;
+//     img{
+//         max-height: 200px;
+//         width:auto;
+//     }
+// }
+
+.video-container {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+
+    height: 98vh;
+    ;
+
+    .video {
+        width: 100%;
+        height: 100%;
         min-height: 600px;
     }
 
 }
-.return-btn{
+
+.return-btn {
     position: absolute;
-    top:0;
-    left:0;
-    width:100px;
-    height:30px;
-    padding:4px;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 30px;
+    padding: 4px;
     text-align: center;
     text-decoration: none;
     background-color: whitesmoke;
@@ -150,26 +206,30 @@ html{
     border-radius: 3px;
 }
 
-.url-container{
+.url-container {
     margin-top: 5vh;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
-.player-select{
-    margin:0 auto;
+
+.player-select {
+    margin: 0 auto;
     text-align: center;
-    
+
 }
-.eps-select{
+
+.eps-select {
     margin-top: 5vh;
-    margin:0 auto;
+    margin: 0 auto;
     text-align: center;
-;
+    ;
 }
+
 button {
-   margin: 5px;
+    margin: 5px;
 }
-.mt-0{
+
+.mt-0 {
     margin-top: 15px;
 }

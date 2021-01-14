@@ -16,7 +16,6 @@ router.param('name',(req,res,next,id)=>{
     const target=dom.getElementsByClassName('button_xemphim')[0].outerHTML;
   
     const e=target.substring(target.indexOf('href'),target.indexOf('title')).trim()
-    console.log(e.indexOf('tap-1'));
     if(e.indexOf('full') > 0)
     {
       res.redirect(`/phim/full/${id}/hls`)

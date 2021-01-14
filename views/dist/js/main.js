@@ -1,16 +1,75 @@
-const list=document.getElementById('recent-list')
-const storage=window.localStorage;
+
+const list = document.getElementById('recent-list')
+const storage = window.localStorage;
 let recent;
-if(!storage.getItem('recent'))
-{
+
+function addSearch(value, title, image) {
+    const storage = window.localStorage;
+    let recent;
+
+    if (!storage.getItem('recent')) {
+        window.localStorage.setItem('recent', JSON.stringify([]));
+        recent = JSON.parse(storage.getItem('recent'));
+
+    }
+    else {
+        recent = JSON.parse(storage.getItem('recent'));
+
+
+    }
+    const compare = recent.some(e => e.title === title)
+    const index = recent.findIndex(e => e.title === title)
+    if (!compare) {
+
+        recent.unshift({ src: value.toString(), image: image.toString(), title: title.toString() })
+    }
+    else {
+        const temp = recent[0];
+        recent[0] = recent[index]
+        recent[index] = temp;
+    }
+    window.localStorage.setItem('recent', JSON.stringify(recent));
+
+
+
+
+
+}
+
+const mouseOver=(value)=>{
+    console.log(value);
+  const a=document.getElementsByTagName('body')[0]
+  a.style.backgroundImage=`url('${"https://subnhanh.net"+value}')`
+}
+if (!storage.getItem('recent')) {
     window.localStorage.setItem('recent', JSON.stringify([]));
 
 }
-else{
-    recent=JSON.parse(storage.getItem('recent'));
+else {
+    recent = JSON.parse(storage.getItem('recent'));
 }
 ;
-list.innerHTML=(recent.reverse().splice(0,10).map(e=>(`<a class="wrapper" href=${e.src.toString()}>
-    <img src="https://subnhanh.net${e.image.toString()}"/>
+
+    list.innerHTML = (recent.splice(0, 10).map(e => (`
+    <a class="wrapper" href='${e.src}'  onclick="addSearch('${e.src}','${e.title}','${e.image}');" onmouseover="mouseOver('${e.image}');">
+
+    <div class="img-ctn" style="background-image:url('https://subnhanh.net${e.image.toString()}');"></div>
     <p>${e.title}</p>
     </a>`))).join('')
+
+
+
+    
+
+
+fetch('/phimbo/trend').then(res=>res.json()).then((resp)=>{
+    console.log(resp);
+    const trend = document.getElementById('trending')
+    trend.innerHTML = (resp.array.map(e => (`
+    <a class="wrapper" href='${e.src}'  onclick="addSearch('${e.src}','${e.title}','${e.image}');" onmouseover="mouseOver('${e.image}');">
+    <div class="img-ctn" style="background-image:url('https://subnhanh.net${e.image.toString()}');"></div>
+    <p>${e.title}</p>
+    </a>`))).join('')
+})
+
+
