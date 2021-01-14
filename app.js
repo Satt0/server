@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 const phimRouter=require('./routes/phim')
 const phimLeRouter=require('./routes/main/phimLe')
+const phimBoRouter=require('./routes/main/phimBo')
 var app = express();
 
 // view engine setup
@@ -21,6 +22,7 @@ app.use(cookieParser());
 
 app.use('/search', indexRouter);
 app.use('/phimle',phimLeRouter)
+app.use('/phimbo',phimBoRouter)
 app.use('/phim',phimRouter)
 app.use('/',(req,res,next)=>{
   res.render('index')

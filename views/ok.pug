@@ -6,10 +6,11 @@ block content
     div(class="player-select")
         h4 choose server
         for item in player
-           button(id=item.player onclick=`goto1("`+item.player+`")`)=item.player
+           button(id=item.player class='btn' onclick=`goto1("`+item.player+`")`)=item.player
     div(class="eps-select")
         h4 choose episode
         for item in eps
-            button(onclick=`goto("`+item.episode+`");`)=item.episode
+
+              button(onclick=`goto("`+item.episode+`");` class=(playing==item.episode?'btn btn-primary':'btn') )=item.episode
     script
         include ./dist/js/player.js

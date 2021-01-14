@@ -5,7 +5,7 @@ const fetch = require('node-fetch')
 
 
 router.param('tap',(req,res,next,id)=>{
-    
+    req.playing=id;
     axios.get(`https://subnhanh.net/xem-phim/${req.name}-${id}`).then(response => {
         const parser = new DomParser();
         const id = parser.parseFromString(response.data);
@@ -68,7 +68,8 @@ router.get('/:name/:tap/:player',(req,res,next)=>{
       "method": "POST",
       "mode": "cors"
     }).then(resp => resp.text()).then(resp => {
-       res.render('ok',{ok:resp,player:req.arr,eps:req.list.map(e=>({episode:e.src.substring(e.src.indexOf('tap'))}))})
+        
+       res.render('ok',{ok:resp,player:req.arr,playing:req.playing,eps:req.list.map(e=>({episode:e.src.substring(e.src.indexOf('tap'))}))})
 
     }).catch(err => {
         next(err);

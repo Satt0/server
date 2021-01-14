@@ -10,7 +10,7 @@ else{
     recent=JSON.parse(storage.getItem('recent'));
 }
 ;
-list.innerHTML=(recent.map(e=>(`<a class="wrapper" href=${e.src.toString()}>
+list.innerHTML=(recent.reverse().splice(0,10).map(e=>(`<a class="wrapper" href=${e.src.toString()}>
     <img src="https://subnhanh.net${e.image.toString()}"/>
     <p>${e.title}</p>
     </a>`))).join('')

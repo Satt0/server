@@ -7,6 +7,12 @@ html {
   background-position: center;
 }
 
+.active-link {
+  background-color: blue;
+  color: white;
+  display: none;
+}
+
 #main-player {
   height: 60vh;
   width: 80vw;
@@ -28,7 +34,6 @@ html {
 }
 
 .main-wrapper {
-  max-width: 968px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -195,21 +200,7 @@ html {
 }
 
 button {
-  border: none;
-  background-color: whitesmoke;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 10px;
-  margin-top: 5px;
-  margin-right: 5px;
-  cursor: pointer;
-  border-radius: 4px;
-  -webkit-transition: .3s all;
-  transition: .3s all;
-}
-
-button:hover {
-  background-color: yellow;
+  margin: 5px;
 }
 
 .mt-0 {

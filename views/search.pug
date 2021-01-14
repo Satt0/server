@@ -4,19 +4,13 @@ block content
         div(class='container d-flex justify-content-center align-content-center mt-4')
             nav(aria-label='Page navigation example')
                 ul.pagination
-                    each item,index in page
+                    each item in page
                         li(class="page-item")
-                            a(class='page-link' href=item.link?"/phimle?"+item.link:'') #{index==0?"<":item.count}
-                    //- li.page-item
-                    //-  a.page-link(href='#') Previous
-                    //- li.page-item
-                    //-  a.page-link(href='#') 1
-                    //- li.page-item
-                    //-  a.page-link(href='#') 2
-                    //-  li.page-item
-                    //- a.page-link(href='#') 3
-                    //-  li.page-item
-                    //- a.page-link(href='#') Next
+                            if(item.link) 
+                               if(item.bo)
+                                   a(class='page-link '+item.current href=item.link?"/phimbo?"+item.link:'#') #{ item.count}
+                               else
+                                   a(class='page-link '+item.current href=item.link?"/phimle?"+item.link:'#') #{ item.count}
 
         
     div(class="item-container" id="getMe")
@@ -26,6 +20,20 @@ block content
                 img(title=item.title src=("https://subnhanh.net"+item.image))
                 p(class="item")=item.title
     
+    if(page)    
+        div(class='container d-flex justify-content-center align-content-center mt-4')
+            nav(aria-label='Page navigation example')
+                ul.pagination
+                    each item in page
+                        li(class="page-item")
+                            if(item.link) 
+                               if(item.bo)
+                                   a(class='page-link '+item.current href=item.link?"/phimbo?"+item.link:'#') #{ item.count}
+                               else
+                                   a(class='page-link '+item.current href=item.link?"/phimle?"+item.link:'#') #{ item.count}
+
+        
+                    
 
     script
         include ./dist/js/search.js

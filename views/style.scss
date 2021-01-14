@@ -9,12 +9,16 @@ html{
     // color:whitesmoke;
     
  }
+.active-link{
+    background-color: blue;
+    color:white;
+    display:none;
+}
  #main-player{
     @media only screen and(max-width:1000px){
         height:50vh;
         width:90vw;
-        // margin:0 auto;
-        // padding:0;
+        
         max-height: 400px;
     }
      height:60vh;
@@ -28,7 +32,6 @@ html{
     
  }
  .main-wrapper{
-     max-width: 968px;
      width:100%;
      margin: 0 auto;
      text-align: center;
@@ -36,10 +39,7 @@ html{
          font-size: 50px;
      }
      form{
-        // display:flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items:center;
+       
      
         input,select{
              
@@ -168,20 +168,7 @@ html{
 ;
 }
 button {
-    border:none;
-    background-color: whitesmoke;
-    font-weight: bold;
-    font-size: 1rem;
-    padding:10px;
-    margin-top: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: .3s all;
-    &:hover{
-        background-color: yellow;
-      
-    }
+   margin: 5px;
 }
 .mt-0{
     margin-top: 15px;
