@@ -13,8 +13,20 @@ router.get('/',(req,res,next)=>{
     const string=parser.parseFromString(response.data)
     const items=string.getElementsByClassName('item-image-block');
     const ok=items.map(e=>helper.parseIt(e.outerHTML))
+    const page=string.getElementById('pagination').getElementsByClassName('page-item')
+    const pagigation=page.map(({outerHTML})=>{
     
-    res.render('search',{array:ok})
+          const link=  outerHTML.substring(outerHTML.indexOf("page="),outerHTML.indexOf('data-page')).trim(' ').split(`"`)[0]
+        const ans={
+            link:link,
+            count:link.substring(5)
+        }
+        return ans
+        }
+    )
+    
+    
+    res.render('search',{array:ok,page:pagigation})
 
 
 

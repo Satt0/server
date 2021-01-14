@@ -1,22 +1,24 @@
 extends layout
 block content
-    //- a(class="return-btn" href="javascript:history.back()") return 
-    
-    div(class='container d-flex justify-content-center align-content-center mt-4')
-      nav(aria-label='Page navigation example')
-        ul.pagination
-            li.page-item
-            a.page-link(href='#') Previous
-            li.page-item
-            a.page-link(href='#') 1
-            li.page-item
-            a.page-link(href='#') 2
-            li.page-item
-            a.page-link(href='#') 3
-            li.page-item
-            a.page-link(href='#') Next
+    if(page)    
+        div(class='container d-flex justify-content-center align-content-center mt-4')
+            nav(aria-label='Page navigation example')
+                ul.pagination
+                    each item,index in page
+                        li(class="page-item")
+                            a(class='page-link' href=item.link?"/phimle?"+item.link:'') #{index==0?"<":item.count}
+                    //- li.page-item
+                    //-  a.page-link(href='#') Previous
+                    //- li.page-item
+                    //-  a.page-link(href='#') 1
+                    //- li.page-item
+                    //-  a.page-link(href='#') 2
+                    //-  li.page-item
+                    //- a.page-link(href='#') 3
+                    //-  li.page-item
+                    //- a.page-link(href='#') Next
 
-    
+        
     div(class="item-container" id="getMe")
         -var x=array
         for item in x
