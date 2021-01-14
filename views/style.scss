@@ -82,7 +82,8 @@ html{
  .wrapper{
      display:flex;
      transition: .2s linear;
-     color:whitesmoke;
+     color:black;
+    //  color:whitesmoke;
      &:hover{
         transform:scale(1.05);
      }
@@ -171,6 +172,6 @@ button {
     transition: .3s all;
     &:hover{
         background-color: yellow;
-        color:white;
+      
     }
 }

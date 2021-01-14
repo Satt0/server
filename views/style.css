@@ -90,7 +90,7 @@ html {
   display: flex;
   -webkit-transition: .2s linear;
   transition: .2s linear;
-  color: whitesmoke;
+  color: black;
   min-height: 350px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -193,6 +193,5 @@ button {
 
 button:hover {
   background-color: yellow;
-  color: white;
 }
 /*# sourceMappingURL=style.css.map */
