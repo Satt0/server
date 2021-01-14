@@ -9,9 +9,8 @@ if(!storage.getItem('recent'))
 else{
     recent=JSON.parse(storage.getItem('recent'));
 }
-list.innerHTML=(recent.map(e=>(`
-    <li>
-    <a href=${e.src.toString()}>Xem > ${e.title}</p>
-    </li>
-
-`)))
+;
+list.innerHTML=(recent.map(e=>(`<a class="wrapper" href=${e.src.toString()}>
+    <img src="https://subnhanh.net${e.image.toString()}"/>
+    <p>${e.title}</p>
+    </a>`))).join('')

@@ -1,9 +1,8 @@
 
-function addSearch(value,title) {
+function addSearch(value,title,image) {
     
     const storage = window.localStorage;
     let recent;
-    console.log(value,title);
    
     if (!storage.getItem('recent')) {
         window.localStorage.setItem('recent', JSON.stringify([]));
@@ -14,8 +13,11 @@ function addSearch(value,title) {
         recent = JSON.parse(storage.getItem('recent'));
         
     }
-    recent.push({src:value.toString(),title:title})
-    console.log(recent);
+    const compare = recent.some(e=>e.title===title)
+    if(!compare){
+
+        recent.push({src:value.toString(),image:image.toString(),title:title.toString()})
+    }
     window.localStorage.setItem('recent', JSON.stringify(recent));
 
     

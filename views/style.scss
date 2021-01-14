@@ -3,6 +3,10 @@ html{
     margin:0;
     font-family: 'Noto Sans JP', sans-serif;
     padding:0;
+    // background-image: url('https://cdn.printgo.vn/uploads/media/783284/tong-hop-30-mau-hinh-nen-tet-cho-may-tinh-duoc-ua-thich-nhat-nam-nay-29_1605840035.jpg');
+    background-position: center;
+    // background-size: cover;
+    // color:whitesmoke;
     
  }
  #main-player{
@@ -24,7 +28,7 @@ html{
     
  }
  .main-wrapper{
-     max-width: 768px;
+     max-width: 968px;
      width:100%;
      margin: 0 auto;
      text-align: center;
@@ -57,9 +61,9 @@ html{
  .item-container{
      width: 90%;
      display:grid;
-     columns: 1 1 1;
+    //  columns: 1 1 1;
      margin:0 auto;
-     flex-wrap: wrap;
+     
      
      grid-gap: 20px;
      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -72,10 +76,16 @@ html{
      @media only screen and (max-width:450px){
         grid-template-columns: 1fr 1fr;
      }
+  
  }
 
  .wrapper{
      display:flex;
+     transition: .2s linear;
+     color:whitesmoke;
+     &:hover{
+        transform:scale(1.05);
+     }
      min-height:350px;
      flex-direction: column;
      justify-content: space-between;
@@ -87,10 +97,18 @@ html{
             // max-width: 200px;
         }
         .item{
-            color:black;
+            
             font-family: 'Roboto', sans-serif; 
         }
      
+ }
+ #recent-list{
+    .wrapper{
+        background-color: whitesmoke;
+        color:black;
+        font-size: .8rem;
+        min-height: 200px;
+    }
  }
 .video-container{
     position: absolute;
@@ -122,13 +140,7 @@ html{
     border: none;
     border-radius: 3px;
 }
-#recent-list{
-    padding:0;
-    margin:0;
-    li{
-        list-style-type:none;
-    }
-}
+
 .url-container{
     margin-top: 5vh;
     text-align: center;
@@ -138,19 +150,27 @@ html{
 .player-select{
     margin:0 auto;
     text-align: center;
-    button {
-        border:none;
-        background-color: whitesmoke;
-        font-weight: bold;
-        font-size: 1rem;
-        padding:10px;
-        margin-right: 5px;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: .3s all;
-        &:hover{
-            background-color: yellow;
-            color:white;
-        }
+    
+}
+.eps-select{
+    margin-top: 5vh;
+    margin:0 auto;
+    text-align: center;
+;
+}
+button {
+    border:none;
+    background-color: whitesmoke;
+    font-weight: bold;
+    font-size: 1rem;
+    padding:10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .3s all;
+    &:hover{
+        background-color: yellow;
+        color:white;
     }
 }

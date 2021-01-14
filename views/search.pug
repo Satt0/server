@@ -4,7 +4,7 @@ block content
     div(class="item-container" id="getMe")
         -var x=array
         for item in x
-            a(class="wrapper" href=item.href onclick=(`addSearch("`+item.href+`","`+item.title+`");`))
+            a(class="wrapper" href=item.href  onclick=(`addSearch("`+item.href+`","`+item.title+`","`+item.image+`");`))
                 img(title=item.title src=("https://subnhanh.net"+item.image))
                 p(class="item")=item.title
     

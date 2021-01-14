@@ -5,7 +5,7 @@ const helper={
         const image=str.substring(str.indexOf('style="background-image:url'),str.indexOf('href'));
         
         return {
-            href:href.trim().split('"')[1],
+            href:'/phim'+href.trim().split('"')[1].substring(5),
             title:title.trim().split('"')[1],
             image:image.split(`'`)[1]
         };

@@ -61,6 +61,7 @@ const search=req.query.search;
 
       })
       res.render('search', { array: arr })
+      // res.send(arr)
 
     });
   }

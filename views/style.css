@@ -4,6 +4,7 @@ html {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
   padding: 0;
+  background-position: center;
 }
 
 #main-player {
@@ -27,7 +28,7 @@ html {
 }
 
 .main-wrapper {
-  max-width: 768px;
+  max-width: 968px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -56,11 +57,7 @@ html {
   width: 90%;
   display: -ms-grid;
   display: grid;
-  -webkit-columns: 1 1 1;
-          columns: 1 1 1;
   margin: 0 auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   grid-gap: 20px;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -91,6 +88,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  color: whitesmoke;
   min-height: 350px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -103,14 +103,25 @@ html {
   text-decoration: none;
 }
 
+.wrapper:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .wrapper img {
   width: 100%;
   height: auto;
 }
 
 .wrapper .item {
-  color: black;
   font-family: 'Roboto', sans-serif;
+}
+
+#recent-list .wrapper {
+  background-color: whitesmoke;
+  color: black;
+  font-size: .8rem;
+  min-height: 200px;
 }
 
 .video-container {
@@ -143,15 +154,6 @@ html {
   border-radius: 3px;
 }
 
-#recent-list {
-  padding: 0;
-  margin: 0;
-}
-
-#recent-list li {
-  list-style-type: none;
-}
-
 .url-container {
   margin-top: 5vh;
   text-align: center;
@@ -169,12 +171,19 @@ html {
   text-align: center;
 }
 
-.player-select button {
+.eps-select {
+  margin-top: 5vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
   border: none;
   background-color: whitesmoke;
   font-weight: bold;
   font-size: 1rem;
   padding: 10px;
+  margin-top: 5px;
   margin-right: 5px;
   cursor: pointer;
   border-radius: 4px;
@@ -182,7 +191,7 @@ html {
   transition: .3s all;
 }
 
-.player-select button:hover {
+button:hover {
   background-color: yellow;
   color: white;
 }
