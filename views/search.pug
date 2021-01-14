@@ -1,10 +1,15 @@
 extends layout
 block content
     a(class="return-btn" href="javascript:history.back()") return 
-    div(class="item-container")
+    div(class="item-container" id="getMe")
         -var x=array
         for item in x
-            a(class="wrapper" href=(""+item.href))
+            a(class="wrapper" href=item.href onclick=(`addSearch("`+item.href+`","`+item.title+`");`))
                 img(title=item.title src=("https://subnhanh.net"+item.image))
                 p(class="item")=item.title
+    
+
+
+    script
+        include ./dist/js/search.js
 

@@ -6,6 +6,26 @@ html {
   padding: 0;
 }
 
+#main-player {
+  height: 60vh;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 5vh auto;
+  max-height: 800px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #main-player {
+    height: 50vh;
+    width: 90vw;
+    max-height: 400px;
+  }
+}
+
+#main-player iframe {
+  height: 100%;
+}
+
 .main-wrapper {
   max-width: 768px;
   width: 100%;
@@ -25,6 +45,7 @@ html {
   background-color: whitesmoke;
   text-align: center;
   width: 10%;
+  min-width: 100px;
 }
 
 .main-wrapper form .input-text {
@@ -120,5 +141,49 @@ html {
   background-color: whitesmoke;
   border: none;
   border-radius: 3px;
+}
+
+#recent-list {
+  padding: 0;
+  margin: 0;
+}
+
+#recent-list li {
+  list-style-type: none;
+}
+
+.url-container {
+  margin-top: 5vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.player-select {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.player-select button {
+  border: none;
+  background-color: whitesmoke;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.player-select button:hover {
+  background-color: yellow;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,3 +3,9 @@ block content
     a(class="return-btn" href="javascript:history.back()") return 
     -var temp=ok    
     div !{temp}
+    div(class="player-select")
+        h4 choose server
+        for item in player
+           button(id=item.player onclick=`goto("`+item.player+`")`)=item.player
+    script
+        include ./dist/js/player.js
