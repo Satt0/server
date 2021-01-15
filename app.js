@@ -28,7 +28,7 @@ app.use('/phimle',phimLeRouter)
 app.use('/phimbo',phimBoRouter)
 app.use('/phim',phimRouter)
 app.use('/',(req,res,next)=>{
-  res.render('index')
+  res.render('index',{title:"Movie Crawler"})
 })
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

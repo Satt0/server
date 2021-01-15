@@ -83,7 +83,7 @@ router.get('/:name/:tap/:player',(req,res,next)=>{
       "method": "POST",
       "mode": "cors"
     }).then(resp => resp.text()).then(resp => {
-        const content={ok:resp,player:req.arr,playing:req.playing,eps:req.list.map(e=>({episode:e.src.substring(e.src.indexOf('tap'))}))};
+        const content={ok:resp,title:`watching: ${req.playing}`,player:req.arr,playing:req.playing,eps:req.list.map(e=>({episode:e.src.substring(e.src.indexOf('tap'))}))};
         db.update({name:req.name},{ $push: { tap: {tap:req.playing,content:content} } },{upsert:true}).then(resp=>{
             res.render('ok',content)
         })

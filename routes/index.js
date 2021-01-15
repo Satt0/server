@@ -59,7 +59,7 @@ const search=req.query.search;
 
 
       })
-      res.render('search', { array: arr })
+      res.render('search', { array: arr ,title:`Search: ${arr.length} ${arr.length>1?'results':'result'}`})
       // res.send(arr)
 
     });
