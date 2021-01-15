@@ -12,7 +12,7 @@ router.param('tap',(req,res,next,id)=>{
            found=resp[0].tap.find(e=>e.tap===req.playing);
        }
         
-       if(found)
+       if(false)
        {    
            console.log('from db');
            res.render('ok',found.content);
