@@ -8,11 +8,13 @@ const db=monk.get('full')
 router.param('name', (req, res, next, id) => {
     req.dbName=id;
    db.find({name:id}).then(resp=>{
-      if(false)
+       console.log(resp.length);
+      if(resp.length>0)
       {
-            console.log('from db');
-
-        res.render('ok',resp[0].content)
+            req.arr=resp[0].player;
+            next()
+            
+      
       }
      else{
            axios.get(`https://subnhanh.net/phim/${id}`).then(response => {
@@ -34,7 +36,9 @@ router.param('name', (req, res, next, id) => {
                 }
             })
             req.arr = arr;
-            next()
+            db.insert({name:req.dbName,player:arr}).then(ok=>{
+                next()
+            })
 
 
         }).catch(e => {
@@ -56,7 +60,6 @@ router.param('player', (req, res, next, id) => {
 
 router.get('/:name/:player', (req, res, next) => {
     data = req.found
-    console.log(data.src);
 
     fetch("https://subnhanh.net/frontend/default/ajax-player", {
         "headers": {
@@ -77,10 +80,9 @@ router.get('/:name/:player', (req, res, next) => {
         "mode": "cors"
     }).then(resp => resp.text()).then(resp => {
         const response={ ok: resp, player: req.arr, eps: [] }
-        db.insert({name:req.dbName,content:response}).then((resp)=>{
-
+       
             res.render('ok',response )
-        })
+       
         
     }).catch(err => {
         next(err);

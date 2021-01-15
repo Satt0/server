@@ -4,6 +4,15 @@ const DomParser = require('dom-parser')
 const fetch = require('node-fetch')
 const monk=require('../../db')
 const db=monk.get('series');
+
+router.param('name',(req,res,next,id)=>{
+   
+    req.name=id;
+    next()
+
+})
+
+
 router.param('tap',(req,res,next,id)=>{
     req.playing=id;
    db.find({name:req.name}).then((resp)=>{
@@ -48,12 +57,7 @@ router.param('tap',(req,res,next,id)=>{
    
 })
 
-router.param('name',(req,res,next,id)=>{
-   
-    req.name=id;
-    next()
 
-})
 
 router.param('player',(req,res,next,id)=>{
   

@@ -1,6 +1,7 @@
 extends layout
 block content
-    //- a(class="return-btn" href="javascript:history.back()") return 
+    //- div(class='container d-flex justify-content-center' id="light-off")
+    //-     button dark
     -var temp=ok    
     div(class='container') !{temp}
     div(class="player-select")
@@ -12,6 +13,6 @@ block content
         h4 choose episode
         for item in eps
 
-              button(onclick=`goto("`+item.episode+`");` class=(playing==item.episode?'btn btn-primary':'btn') )=item.episode
+              button(onclick=`goto("`+item.episode+`");` class=(playing==item.episode?'btn active-link':'btn') )=item.episode
     script
         include ./dist/js/player.js

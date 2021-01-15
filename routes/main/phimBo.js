@@ -12,20 +12,7 @@ router.get('/trend',(req,res,next)=>{
     const string=parser.parseFromString(response.data)
     const items=string.getElementsByClassName('item-image-block');
     const ok=items.map(e=>helper.parseIt(e.outerHTML))
-    // const page=string.getElementById('pagination').getElementsByClassName('page-item')
-    // const pagigation=page.map(({outerHTML},index)=>{
-    
-    //       const link=  outerHTML.substring(outerHTML.indexOf("page="),outerHTML.indexOf('data-page')).trim(' ').split(`"`)[0]
-    //     const ans={
-    //         link:link,
-    //         bo:true,
-    //         count:index===page.length-1?'>':index===0?'<':link.substring(5),
-    //         current:pagecCount===link.substring(5)?'active-link':''
-    //     }
-    //     return ans
-    //     }
-    // )
-    // // res.send(pagigation)
+ 
     
     res.json({array:ok.slice(0,10)})
 
@@ -53,7 +40,6 @@ router.get('/',(req,res,next)=>{
         return ans
         }
     )
-    // res.send(pagigation)
     
     res.render('search',{array:ok,page:pagigation})
 

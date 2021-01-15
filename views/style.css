@@ -10,6 +10,20 @@ html {
 
 body {
   background-position: center;
+  overflow-x: hidden;
+}
+
+.btn {
+  background: -webkit-gradient(linear, left top, left bottom, from(#855c5c), to(#9198e5));
+  background: linear-gradient(#855c5c, #9198e5);
+  color: white;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #wallpaper-blur {
@@ -27,7 +41,7 @@ a {
 }
 
 .active-link {
-  background-color: blue;
+  background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
   color: white;
 }
 
@@ -77,6 +91,8 @@ a {
 }
 
 .item-container {
+  -webkit-transition: .1s all;
+  transition: .1s all;
   width: 70%;
   display: -ms-grid;
   display: grid;
@@ -134,11 +150,11 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
   color: black;
   background-color: whitesmoke;
-  min-height: 380px;
+  min-height: 360px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -152,25 +168,42 @@ a {
 
 @media only screen and (max-width: 470px) {
   .wrapper {
-    min-height: 300px;
+    min-height: 325px;
   }
 }
 
-.wrapper:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+@media only screen and (min-width: 1000px) {
+  .wrapper:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    opacity: 1 !important;
+  }
 }
 
-.wrapper .img-ctn {
+.wrapper .container-fluid {
+  height: 100%;
+}
+
+.wrapper .container-fluid .img-ctn {
   height: 80%;
+  -webkit-transition: all 30s;
+  transition: all 30s;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.wrapper .item {
-  font-family: 'Roboto', sans-serif;
+.wrapper .container-fluid p {
+  padding: 5% 0;
+  margin: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+  .wrapper:hover {
+    -webkit-transform: translateY(-5%) scale(1.1);
+            transform: translateY(-5%) scale(1.1);
+  }
 }
 
 .video-container {

@@ -17,9 +17,10 @@ block content
         -var x=array
         for item in x
             a(class="wrapper" href=item.href  onclick=(`addSearch("`+item.href+`","`+item.title+`","`+item.image+`");`))
-                div(class='img-ctn' style="background-image:url('"+("https://subnhanh.net"+item.image)+`')` onmouseover="mouseOver('"+item.image+"')")
-                 //img(title=item.title src=("https://subnhanh.net"+item.image))
-                p=item.title
+               div(class='container-fluid justify-content-center')
+                     div(class='img-ctn' style="background-image:url('"+("https://subnhanh.net"+item.image)+`')` onmouseout="mouseOut();" onmouseover="mouseOver('"+item.image+"')")
+                     //img(title=item.title src=("https://subnhanh.net"+item.image))
+                     p=item.title
     
     if(page)    
         div(class='container d-flex justify-content-center align-content-center mt-4')

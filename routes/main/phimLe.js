@@ -20,7 +20,7 @@ router.get('/',(req,res,next)=>{
         const ans={
             link:link,
             bo:false,
-            count:index===page.length-1?'>':link.substring(5),
+            count:index===page.length-1?'>':index===0?'<':link.substring(5),
             current:pagecCount===link.substring(5)?'active-link':''
         }
         return ans
