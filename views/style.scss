@@ -71,7 +71,7 @@ a{
     h1 {
         font-size: 50px;
     }
-
+    
     form {
 
 
@@ -98,6 +98,7 @@ a{
 .container-fluid {
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 .item-container {

@@ -8,7 +8,7 @@ const db=monk.get('full')
 router.param('name', (req, res, next, id) => {
     req.dbName=id;
    db.find({name:id}).then(resp=>{
-      if(resp.length>0)
+      if(false)
       {
             console.log('from db');
 

@@ -73,6 +73,7 @@ a {
 .container-fluid {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 .item-container {
