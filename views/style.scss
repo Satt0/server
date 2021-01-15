@@ -15,6 +15,16 @@ body{
     background-position: center;
     
 }
+#wallpaper-blur{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    top:0;
+    z-index: -333;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+}
 a{
     text-decoration: none !important;
 }
@@ -45,6 +55,7 @@ a{
 }
 
 .main-wrapper {
+    background-color: transparent;
     width: 100%;
     margin: 0 auto;
     // background-color: rgba(43, 21, 21, 0.2);

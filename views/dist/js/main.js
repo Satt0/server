@@ -37,8 +37,8 @@ function addSearch(value, title, image) {
 }
 
 const mouseOver=(value)=>{
-    console.log(value);
-  const a=document.getElementsByTagName('body')[0]
+   
+  const a=document.getElementById('wallpaper-blur')
   a.style.backgroundImage=`url('${"https://subnhanh.net"+value}')`
 }
 if (!storage.getItem('recent')) {
