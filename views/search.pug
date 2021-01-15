@@ -4,13 +4,13 @@ block content
         div(class='container d-flex justify-content-center align-content-center mt-4')
             nav(aria-label='Page navigation example')
                 ul.pagination
-                    each item in page
+                    each item,index in page
                         li(class="page-item")
                             if(item.link) 
                                if(item.bo)
-                                   a(class='page-link '+item.current href=item.link?"/phimbo?"+item.link:'#') #{ item.count}
+                                   a(class='page-link '+item.current href=item.link?"/phimbo?"+item.link:'#') #{item.count}
                                else
-                                   a(class='page-link '+item.current href=item.link?"/phimle?"+item.link:'#') #{ item.count}
+                                   a(class='page-link '+item.current href=item.link?"/phimle?"+item.link:'#') #{item.count}
 
         
     div(class="item-container" id="getMe")
