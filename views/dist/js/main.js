@@ -32,13 +32,12 @@ function addSearch(value, title, image) {
 
     const c=document.getElementsByClassName('wrapper');
 
-    if(window.innerWidth>1000)
-    {
+    
         Array.from(c).forEach(e=>{
             
             e.style.opacity='.6'
           })
-    }
+   
 
 
 
