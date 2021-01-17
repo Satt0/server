@@ -16,14 +16,39 @@ body{
     overflow-x: hidden;
     
 }
-.btn{
-    background: linear-gradient(#855c5c, #9198e5);
-    color:white;
-    transition: all .1s ease-in;
-    &:hover{
-        transform:scale(1.1);
-    }
-}
+// .btn{
+    
+
+
+//     background: linear-gradient(#855c5c, #9198e5);
+//     color:white;
+//     transition: all .1s ease-in;
+//     &:hover{
+//         transform:scale(1.1);
+//     }
+// }
+
+
+.btn {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
+.btn {
+//    margin: 10px;
+//    padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 2px;
+   display: inline-block;
+ }
+
+ .btn:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
 #wallpaper-blur{
     position: fixed;
     // transition: background-image .1s ease-in;
@@ -38,13 +63,26 @@ body{
 a{
     text-decoration: none !important;
 }
+
+
+
+.active-link {background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%)}
 .active-link {
-    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-    color: white;
- 
-}
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 2px;
+   display: inline-block;
+ }
+
+ .active-link:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
 
 #main-player {
     // @media only screen and(max-width:1000px) {
