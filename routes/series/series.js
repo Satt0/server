@@ -81,7 +81,7 @@ router.get('/:name/:tap/:player',(req,res,next)=>{
         "sec-fetch-site": "same-origin",
         "x-requested-with": "XMLHttpRequest",
       },
-      "referrer": "https://subnhanh.net/xem-phim/tenet-full",
+      "referrer": "https://subnhanh.net",
       "referrerPolicy": "strict-origin-when-cross-origin",
       "body": req.found.src,
       "method": "POST",

@@ -24,7 +24,7 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/search', indexRouter);
-app.use('/phimle',phimLeRouter)
+app.use('/the-loai/phim-le',phimLeRouter)
 app.use('/phimbo',phimBoRouter)
 app.use('/phim',phimRouter)
 app.use('/',(req,res,next)=>{
