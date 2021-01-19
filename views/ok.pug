@@ -5,12 +5,12 @@ block content
     -var temp=ok    
     div(class='container') !{temp}
     div(class="player-select")
-        h4 choose server
+        h4(class='color-text') choose server
         for item in player
            button(id=item.player class='btn' onclick=`goto1("`+item.player+`")`)=item.player
     div(class="eps-select")
        if(eps.length>0) 
-        h4 choose episode
+        h4(class='color-text') choose episode
         for item in eps
 
               button(onclick=`goto("`+item.episode+`");` class=(playing==item.episode?'btn active-link':'btn') )=item.episode

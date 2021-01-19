@@ -50,22 +50,13 @@ const mouseOver=(value)=>{
 
  const b=Array.from( document.getElementsByClassName('color-text'))
 
- b.forEach(element => {
-      element.style.color="white"
-      element.style.textShadow="1px 1px black"
-      
-  });
+
 }
 function mouseOut(){
 
-    const c=document.getElementsByClassName('item-container');
+   
   
-// if(window.innerWidth>1000)
-// {
-//     Array.from(c).forEach(e=>{
-//         e.style.transform='scale(1)'
-//       })
-// }
+
   
 }
 if (!storage.getItem('recent')) {
@@ -93,6 +84,7 @@ else {
     
 if(document.getElementById('trending'))
 {
+    
     fetch('/phimbo/trend').then(res=>res.json()).then((resp)=>{
    
     const trend = document.getElementById('trending')
@@ -112,21 +104,3 @@ if(document.getElementById('trending'))
 
 
 
-// const dark=document.getElementById('light-off')
-
-// let toggle=false;
-// dark.addEventListener('click',()=>{
-    
-//     const bg=document.getElementById('wallpaper-blur')
-//     console.log(bg.style.backgroudColor);
-//     if(toggle)
-//     {
-//         bg.style.backgroudColor='black'
-        
-//     }
-//     else{
-//         bg.style.backgroudColor='white'
-
-//     }
-//     toggle=!toggle
-// })

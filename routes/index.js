@@ -67,33 +67,6 @@ axios.get('https://www.googleapis.com/customsearch/v1?key=AIzaSyCWeB0YVRL_T0p2Rw
 
 })
 
-
-
-  // try {
-  //   axios.get(`https://subnhanh.net/search?query=${query.search.split(' ').join('+')}`).then(resp => {
-
-  //     const data = (resp.data);
-
-  //     const parser = new DomParser();
-  //     const dom = Array.from(parser.parseFromString(data).getElementsByClassName('item-block'));
-  //     //list of movies
-  //     let arr = []
-  //     dom.forEach((e) => {
-  //       const result = parser.parseFromString(e.innerHTML);
-  //       const a = (result.getElementsByClassName('item-image-block')[0].outerHTML);
-  //       const b = (helper.parseIt(a));
-  //       arr.push(b);
-
-
-  //     })
-  //     res.render('search', { array: arr ,title:`Search: ${arr.length} ${arr.length>1?'results':'result'}`})
-  //     // res.send(arr)
-
-  //   });
-  // }
-  // catch (err) {
-  //   next(err)
-  // }
 });
 
 

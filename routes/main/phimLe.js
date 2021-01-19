@@ -41,7 +41,6 @@ router.get('/',(req,res,next)=>{
         const pagigation=page.map(({outerHTML},index)=>{
         
               const link=  outerHTML.substring(outerHTML.indexOf("page="),outerHTML.indexOf('data-page')).trim(' ').split(`"`)[0]
-              console.log(link);
             const ans={
                 link:link,
                 bo:false,

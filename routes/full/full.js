@@ -8,7 +8,6 @@ const db=monk.get('full')
 router.param('name', (req, res, next, id) => {
     req.dbName=id;
    db.find({name:id}).then(resp=>{
-       console.log(resp.length);
       if(resp.length>0)
       {
             req.arr=resp[0].player;
