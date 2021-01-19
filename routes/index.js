@@ -15,7 +15,8 @@ const limiter = rateLimit({
 
 router.get('/', limiter, function (req, res, next) {
   const query = req.query;
-const search=req.query.search.trim(' ').split(' ').join('+');
+  
+const search=helper.VntoEn(req.query.search.trim(' ').split(' ').join('+'));
   
 
 
