@@ -181,8 +181,8 @@ a{
     transition: .1s linear;
     color: black;
     background-color: whitesmoke;
-    min-height: 370px;
-    border-radius: 2px;
+    min-height: 350px;
+    border-radius:2px;
     @media only screen and (max-width:470px) {
        min-height:325px;
     }
@@ -201,7 +201,7 @@ a{
     text-decoration: none;
     .container-fluid{
         height:100%;
-      
+       
         .img-ctn{
             height:80%;
             transition: all 30s;
@@ -211,10 +211,27 @@ a{
             background-repeat: no-repeat;
            
         }
-       
+       overflow:hidden;
         p{
             padding:5% 0;
-            margin:auto
+            margin:auto;
+            // white-space: nowrap;
+        }
+        .text-floating{
+            position:relative;
+            width:90%;
+            height:50%;
+            overflow: hidden;
+            margin:0 auto;
+            p{
+              position: absolute;
+              white-space: nowrap;
+               
+                left:0;right:0;
+                padding:10% 0;
+                 
+           
+            }
         }
         // .item {
     
@@ -224,11 +241,24 @@ a{
     @media only screen and (min-width:1000px){
         &:hover {
             transform: translateY(-5%) scale(1.1);
-           
+           .text-floating{
+               p{
+                animation: floating 10s infinite;
+
+               }
+           }
             
         }
        }
-
+      
+       @keyframes floating {
+        from {
+            transform:translateX(0%)
+        }
+        to{
+            transform:translateX(-50%)
+        }
+    }
 }
 
 

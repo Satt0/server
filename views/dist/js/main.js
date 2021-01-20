@@ -74,7 +74,9 @@ else {
     <a class="wrapper" href='${e.src}'  onclick="addSearch('${e.src}','${e.title}','${e.image}');" onmouseout="mouseOut();" onmouseover="mouseOver('${e.image}');">
     <div class="container-fluid justify-content-center">
     <div class="img-ctn" style="background-image:url('https://subnhanh.net${e.image.toString()}');"></div>
+    <div class="text-floating">
     <p>${e.title}</p>
+    </div>
     </div>
     </a>`))).join('')
 
@@ -95,7 +97,9 @@ if(document.getElementById('trending'))
 
     <div class="img-ctn" style="background-image:url('https://subnhanh.net${e.image.toString()}');"></div>
     
-    <p>${e.title}</p>
+   <div class="text-floating">
+   <p>${e.title}</p>
+   </div>
     </div>
     </a>`))).join('')
 })
