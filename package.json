@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "deploy":"pm2 start ./bin/www --watch",
     "start": "sudo fuser -k 3000/tcp &  nodemon ./bin/www"
   },
   "dependencies": {
